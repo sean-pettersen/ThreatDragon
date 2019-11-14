@@ -27,12 +27,32 @@
               "id": "187d7e61-e67d-475b-ba94-2d8957df0f21",
               "z": 1,
               "hasOpenThreats": false,
+              "threats": [
+                {
+                  "ruleId": "b2a6d40d-d3f8-4750-8e4d-c02cc84b13dc",
+                  "title": "Generic spoofing threat",
+                  "type": "Spoofing",
+                  "status": "Mitigated",
+                  "severity": "High",
+                  "description": "A generic spoofing threat",
+                  "mitigation": "•\tImplemented strong auth\n•\tAll secrets such as passwords are encrypted in the app.config file\n•\tThe app does not pass creds in plaintext over the wire\n•\tAuth cookies use SSL"
+                },
+                {
+                  "ruleId": "87bc37e2-798e-4d68-bb96-feb1da26da48",
+                  "title": "Generic repudiation threat",
+                  "type": "Repudiation",
+                  "status": "Mitigated",
+                  "severity": "High",
+                  "description": "A generic repudiation threat",
+                  "mitigation": "•\tImplemented secure audit trails within the system\n•\tDigital sigs used"
+                }
+              ],
               "attrs": {
                 ".element-shape": {
                   "class": "element-shape hasNoOpenThreats isInScope"
                 },
                 "text": {
-                  "text": "This is a test"
+                  "text": "Web Browser"
                 },
                 ".element-text": {
                   "class": "element-text hasNoOpenThreats isInScope"

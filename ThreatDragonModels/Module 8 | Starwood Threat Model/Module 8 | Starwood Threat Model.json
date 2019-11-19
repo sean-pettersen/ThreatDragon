@@ -1,0 +1,11 @@
+{
+  "summary": {
+    "title": "Module 8 | Starwood Threat Model",
+    "owner": "Sean",
+    "description": "While not much information is available on Starwoods actual infrastructure and software systems. I've attempted to extrapolate a threat model based on what I was able to discover."
+  },
+  "detail": {
+    "contributors": [],
+    "diagrams": []
+  }
+}

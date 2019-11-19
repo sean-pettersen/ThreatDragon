@@ -46,8 +46,8 @@
                 "height": 100
               },
               "position": {
-                "x": 105,
-                "y": 250
+                "x": 94,
+                "y": 277
               },
               "angle": 0,
               "id": "919e29ca-de81-4130-92a2-23eb852abc2a",
@@ -180,12 +180,12 @@
               "type": "tm.Boundary",
               "smooth": true,
               "source": {
-                "x": 64,
-                "y": 253
+                "x": 34,
+                "y": 265
               },
               "target": {
-                "x": 256,
-                "y": 241
+                "x": 262,
+                "y": 274
               },
               "vertices": [
                 {
@@ -201,17 +201,98 @@
               "type": "tm.Boundary",
               "smooth": true,
               "source": {
-                "x": 15,
-                "y": 435
+                "x": 22,
+                "y": 366
               },
               "target": {
-                "x": 605,
-                "y": 434
+                "x": 263,
+                "y": 370
               },
-              "vertices": [],
+              "vertices": [
+                {
+                  "x": 149,
+                  "y": 436
+                }
+              ],
               "id": "86594796-767c-447c-b7a0-1d770554c793",
               "z": 7,
               "attrs": {}
+            },
+            {
+              "type": "tm.Store",
+              "size": {
+                "width": 160,
+                "height": 80
+              },
+              "position": {
+                "x": 364,
+                "y": 553
+              },
+              "angle": 0,
+              "id": "b446f09a-86dc-4699-b2a1-8134da730f46",
+              "z": 8,
+              "hasOpenThreats": false,
+              "attrs": {
+                ".element-shape": {
+                  "class": "element-shape hasNoOpenThreats isInScope"
+                },
+                "text": {
+                  "text": "Customer"
+                },
+                ".element-text": {
+                  "class": "element-text hasNoOpenThreats isInScope"
+                }
+              }
+            },
+            {
+              "type": "tm.Boundary",
+              "smooth": true,
+              "source": {
+                "x": 366,
+                "y": 370
+              },
+              "target": {
+                "x": 574,
+                "y": 370
+              },
+              "vertices": [
+                {
+                  "x": 470,
+                  "y": 370
+                }
+              ],
+              "id": "21f6d5a7-b632-4dd2-92fc-9c810a8158ed",
+              "z": 9,
+              "attrs": {}
+            },
+            {
+              "type": "tm.Store",
+              "size": {
+                "width": 160,
+                "height": 80
+              },
+              "position": {
+                "x": 34,
+                "y": 558
+              },
+              "angle": 0,
+              "id": "5e714475-3624-42e6-b37c-83c1990b91b3",
+              "z": 10,
+              "hasOpenThreats": false,
+              "storesCredentials": true,
+              "isEncrypted": true,
+              "isSigned": true,
+              "attrs": {
+                ".element-shape": {
+                  "class": "element-shape hasNoOpenThreats isInScope"
+                },
+                "text": {
+                  "text": "Web Application Config"
+                },
+                ".element-text": {
+                  "class": "element-text hasNoOpenThreats isInScope"
+                }
+              }
             }
           ]
         },

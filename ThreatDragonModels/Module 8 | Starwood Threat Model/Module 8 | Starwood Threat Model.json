@@ -612,9 +612,11 @@
               "id": "57be22bf-b140-4ad2-8acf-bdeb85c4c6ff",
               "z": 19,
               "hasOpenThreats": false,
+              "outOfScope": true,
+              "reasonOutOfScope": "Currently Not Implemented",
               "attrs": {
                 ".element-shape": {
-                  "class": "element-shape hasNoOpenThreats isInScope"
+                  "class": "element-shape hasNoOpenThreats isOutOfScope"
                 },
                 "text": {
                   "text": "Central Auth Authority"
@@ -623,6 +625,31 @@
                   "class": "element-text hasNoOpenThreats isInScope"
                 }
               }
+            },
+            {
+              "type": "tm.Boundary",
+              "smooth": true,
+              "source": {
+                "x": 727,
+                "y": 563
+              },
+              "target": {
+                "x": 730,
+                "y": 345
+              },
+              "vertices": [
+                {
+                  "x": 683,
+                  "y": 500
+                },
+                {
+                  "x": 683,
+                  "y": 420
+                }
+              ],
+              "id": "f8575f27-61c5-4aa1-9244-3f62373f4039",
+              "z": 20,
+              "attrs": {}
             }
           ]
         },

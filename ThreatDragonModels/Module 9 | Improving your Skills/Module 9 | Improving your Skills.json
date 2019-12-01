@@ -10,7 +10,228 @@
       {
         "title": "Threat Model",
         "thumbnail": "./public/content/images/thumbnail.jpg",
-        "id": 0
+        "id": 0,
+        "diagramJson": {
+          "cells": [
+            {
+              "type": "tm.Actor",
+              "size": {
+                "width": 160,
+                "height": 80
+              },
+              "position": {
+                "x": 50,
+                "y": 199
+              },
+              "angle": 0,
+              "id": "fac91296-ab2b-43c1-8103-db8348890de1",
+              "z": 1,
+              "hasOpenThreats": true,
+              "threats": [
+                {
+                  "ruleId": "b2a6d40d-d3f8-4750-8e4d-c02cc84b13dc",
+                  "title": "Generic spoofing threat",
+                  "type": "Spoofing",
+                  "status": "Open",
+                  "severity": "High",
+                  "description": "•\tImplement strong auth\n•\tAll secrets such as passwords are encrypted \n•\tPrevent Jenkins from passing creds in plaintext over the wire"
+                },
+                {
+                  "ruleId": "87bc37e2-798e-4d68-bb96-feb1da26da48",
+                  "title": "Generic repudiation threat",
+                  "type": "Repudiation",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "description": "•\tMust implement Strong Authentication\n•\tMust use the logging features to keep an audit trail of any activity on the server\n•\tMust usage of Digital Signatures - when a document or message needs to be non-reputable and especially when such document/message may have come from an intermediate entity (e.g. aggregated across multiple users by a 3rd party) or through non-secure channels (no login, email or pen drive) etc."
+                }
+              ],
+              "attrs": {
+                ".element-shape": {
+                  "class": "element-shape hasOpenThreats isInScope"
+                },
+                "text": {
+                  "text": "Win 2008 R2"
+                },
+                ".element-text": {
+                  "class": "element-text hasOpenThreats isInScope"
+                }
+              }
+            },
+            {
+              "type": "tm.Actor",
+              "size": {
+                "width": 160,
+                "height": 80
+              },
+              "position": {
+                "x": 339,
+                "y": 197
+              },
+              "angle": 0,
+              "id": "00ccb2e8-53e4-44f3-8e11-2f7a221b085d",
+              "z": 2,
+              "hasOpenThreats": false,
+              "attrs": {
+                ".element-shape": {
+                  "class": "element-shape hasNoOpenThreats isInScope"
+                },
+                "text": {
+                  "text": "Kali Linux"
+                },
+                ".element-text": {
+                  "class": "element-text hasNoOpenThreats isInScope"
+                }
+              }
+            },
+            {
+              "type": "tm.Boundary",
+              "smooth": true,
+              "source": {
+                "x": 265,
+                "y": 95
+              },
+              "target": {
+                "x": 265,
+                "y": 426
+              },
+              "vertices": [],
+              "id": "af13b66f-b9a7-4284-ae7f-ce93e22dfb37",
+              "z": 3,
+              "attrs": {}
+            },
+            {
+              "type": "tm.Flow",
+              "smooth": true,
+              "source": {
+                "x": 333,
+                "y": 224
+              },
+              "target": {
+                "x": 210,
+                "y": 223
+              },
+              "vertices": [],
+              "id": "a85c44d3-24d7-433e-a751-2d4a776ef751",
+              "labels": [
+                {
+                  "position": {
+                    "distance": 0.588734175217383,
+                    "offset": 1.3295903844329975
+                  },
+                  "attrs": {
+                    "text": {
+                      "text": "Port 8484",
+                      "font-weight": "400",
+                      "font-size": "small"
+                    }
+                  }
+                }
+              ],
+              "z": 5,
+              "hasOpenThreats": true,
+              "threats": [
+                {
+                  "ruleId": "4adaa48a-0345-4533-a189-64c98c4420dd",
+                  "title": "Generic tampering threat",
+                  "type": "Tampering",
+                  "status": "Open",
+                  "severity": "High",
+                  "description": "•\tMust implement strong auth\n•\tMust secure port 8383\n•\tEnsure Jenkins does not pass creds in plaintext over the wire"
+                },
+                {
+                  "ruleId": "13000296-b17d-4b72-9cc4-f5cc33f80e4c",
+                  "title": "Generic informtion disclosure threat",
+                  "type": "Information disclosure",
+                  "status": "Open",
+                  "severity": "High",
+                  "description": "•\tImplement role-based security model\n•\tApply latest service packs after validation\n•\tHardened the TCP/IP stack by applying the appropriate registry settings to increase the size of the TCP connection queue, decrease the connection establishment period, and employed dynamic backlog mechanisms to ensure that the connection queue is never exhausted\n•\tImplemented IDS (Intrusion Detection System) to detect and respond to SYN attacks"
+                },
+                {
+                  "ruleId": "edb05d76-a695-455f-947b-7d67b78bc31d",
+                  "title": "Generic DoS threat",
+                  "type": "Denial of service",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "description": "Resource and bandwidth throttling technique implemented - we will develop a custom listener that monitors messaging from IPs. When it exceeds certain thresholds, we terminate connections from the IP. This includes validation and input filtering."
+                }
+              ],
+              "attrs": {
+                ".marker-target": {
+                  "class": "marker-target hasOpenThreats isInScope"
+                },
+                ".connection": {
+                  "class": "connection hasOpenThreats isInScope"
+                }
+              }
+            },
+            {
+              "type": "tm.Flow",
+              "smooth": true,
+              "source": {
+                "x": 211,
+                "y": 252
+              },
+              "target": {
+                "x": 334,
+                "y": 252
+              },
+              "vertices": [],
+              "id": "6241e402-dcef-43f7-a2ad-2a0b3deaf8e9",
+              "labels": [
+                {
+                  "position": 0.5,
+                  "attrs": {
+                    "text": {
+                      "text": "Port 8484",
+                      "font-weight": "400",
+                      "font-size": "small"
+                    }
+                  }
+                }
+              ],
+              "z": 6,
+              "hasOpenThreats": true,
+              "threats": [
+                {
+                  "ruleId": "4adaa48a-0345-4533-a189-64c98c4420dd",
+                  "title": "Generic tampering threat",
+                  "type": "Tampering",
+                  "status": "Open",
+                  "severity": "High",
+                  "description": "•\tEncrypt messages\n•\tImplemented data hashing and signing\n•\tImplemented digital sigs\n•\tImplemented strong auth\n•\tImplemented tamper-resistant protocols across communication links. Secured communication links with protocols that provide message integrity"
+                },
+                {
+                  "ruleId": "13000296-b17d-4b72-9cc4-f5cc33f80e4c",
+                  "title": "Generic informtion disclosure threat",
+                  "type": "Information disclosure",
+                  "status": "Open",
+                  "severity": "High",
+                  "description": "•\tImplement role-based security model\n•\tApply latest service packs after validation\n•\tHardened the TCP/IP stack by applying the appropriate registry settings to increase the size of the TCP connection queue, decrease the connection establishment period, and employed dynamic backlog mechanisms to ensure that the connection queue is never exhausted\n•\tImplemented IDS (Intrusion Detection System) to detect and respond to SYN attacks"
+                },
+                {
+                  "ruleId": "edb05d76-a695-455f-947b-7d67b78bc31d",
+                  "title": "Generic DoS threat",
+                  "type": "Denial of service",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "description": "Resource and bandwidth throttling technique implemented - we will develop a custom listener that monitors messaging from IPs. When it exceeds certain thresholds, we terminate connections from the IP. This includes validation and input filtering."
+                }
+              ],
+              "attrs": {
+                ".marker-target": {
+                  "class": "marker-target hasOpenThreats isInScope"
+                },
+                ".connection": {
+                  "class": "connection hasOpenThreats isInScope"
+                }
+              }
+            }
+          ]
+        },
+        "size": {
+          "height": 590,
+          "width": 790
+        }
       }
     ]
   }

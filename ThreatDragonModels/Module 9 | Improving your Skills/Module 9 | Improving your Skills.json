@@ -34,7 +34,8 @@
                   "type": "Spoofing",
                   "status": "Open",
                   "severity": "High",
-                  "description": "•\tImplement strong auth\n•\tAll secrets such as passwords are encrypted \n•\tPrevent Jenkins from passing creds in plaintext over the wire"
+                  "description": "A spoofing attack occurs when an attacker pretends to be someone they're not.",
+                  "mitigation": "•\tImplement strong auth\n•\tAll secrets such as passwords are encrypted \n•\tPrevent Jenkins from passing creds in plaintext over the wire"
                 },
                 {
                   "ruleId": "87bc37e2-798e-4d68-bb96-feb1da26da48",
@@ -42,7 +43,16 @@
                   "type": "Repudiation",
                   "status": "Open",
                   "severity": "Medium",
-                  "description": "•\tMust implement Strong Authentication\n•\tMust use the logging features to keep an audit trail of any activity on the server\n•\tMust usage of Digital Signatures - when a document or message needs to be non-reputable and especially when such document/message may have come from an intermediate entity (e.g. aggregated across multiple users by a 3rd party) or through non-secure channels (no login, email or pen drive) etc."
+                  "description": "Repudiation occurs when someone performs an action and then claims that they didn't actually do it.",
+                  "mitigation": "•\tMust implement Strong Authentication\n•\tMust use the logging features to keep an audit trail of any activity on the server\n•\tMust usage of Digital Signatures - when a document or message needs to be non-reputable and especially when such document/message may have come from an intermediate entity (e.g. aggregated across multiple users by a 3rd party) or through non-secure channels (no login, email or pen drive) etc."
+                },
+                {
+                  "status": "Open",
+                  "severity": "High",
+                  "title": "Elevation of Privlege",
+                  "type": "Elevation of privilege",
+                  "description": "An elevation of privilege threat occurs when an attacker has the ability to gain privileges that they'd not normally have.",
+                  "mitigation": "Beef up Authentication and validate all data positively\nHave the user/ customer follow the strongest authentication method intelligently \nScan the application for known vulnerabilities to minimize exploit attacks\nData Execution Prevention\nAddress space layout randomization (to make it harder for buffer overruns to execute privileged instructions at known addresses in memory)\nRunning applications with least privilege (for example by running Internet Explorer with the Administrator SID disabled in the process token) in order to reduce the ability of buffer overrun exploits to abuse the privileges of an elevated user.\nRequiring kernel mode code to be digitally signed.\nUse of up-to-date antivirus software.\nUse of compilers that trap buffer overruns.\nEncryption of software and/or firmware components\nUse of an operating system with Mandatory Access Controls (MAC) such as SE Linux\nPatching with updated/latest version"
                 }
               ],
               "attrs": {
@@ -136,7 +146,8 @@
                   "type": "Tampering",
                   "status": "Open",
                   "severity": "High",
-                  "description": "•\tMust implement strong auth\n•\tMust secure port 8484\n•\tEnsure Jenkins does not pass creds in plaintext over the wire"
+                  "description": "Tampering attacks occur when the attacker modifies data in transit.",
+                  "mitigation": "•\tMust implement strong auth\n•\tMust secure port 8484\n•\tEnsure Jenkins does not pass creds in plaintext over the wire"
                 },
                 {
                   "ruleId": "13000296-b17d-4b72-9cc4-f5cc33f80e4c",
@@ -144,7 +155,8 @@
                   "type": "Information disclosure",
                   "status": "Open",
                   "severity": "High",
-                  "description": "•\tImplement role-based security model\n•\tApply latest service packs after validation\n•\tHardened the TCP/IP stack by applying the appropriate registry settings to increase the size of the TCP connection queue, decrease the connection establishment period, and employed dynamic backlog mechanisms to ensure that the connection queue is never exhausted\n•\tImplemented IDS (Intrusion Detection System) to detect and respond to SYN attacks"
+                  "description": "Information Disclosure threats are usually quite straightforward - can the attacker view data that they're not supposed to view?  So if you're transferring data from one computer to another, if the attacker can sniff the data on the wire, then your component is subject to an information disclosure threat.",
+                  "mitigation": "•\tImplement role-based security model\n•\tApply latest service packs after validation\n•\tHardened the TCP/IP stack by applying the appropriate registry settings to increase the size of the TCP connection queue, decrease the connection establishment period, and employed dynamic backlog mechanisms to ensure that the connection queue is never exhausted\n•\tImplemented IDS (Intrusion Detection System) to detect and respond to SYN attacks"
                 },
                 {
                   "ruleId": "edb05d76-a695-455f-947b-7d67b78bc31d",
@@ -152,7 +164,8 @@
                   "type": "Denial of service",
                   "status": "Open",
                   "severity": "Medium",
-                  "description": "Resource and bandwidth throttling technique implemented - we will develop a custom listener that monitors messaging from IPs. When it exceeds certain thresholds, we terminate connections from the IP. This includes validation and input filtering."
+                  "description": "Denial of service threats occurs when an attacker can degrade or deny service to users.  So if an attacker can crash your component or redirect packets into a black hole, or consume all the CPU on the box, you have a Denial of service situation.",
+                  "mitigation": "Resource and bandwidth throttling technique implemented - we will develop a custom listener that monitors messaging from IPs. When it exceeds certain thresholds, we terminate connections from the IP. This includes validation and input filtering."
                 }
               ],
               "attrs": {
@@ -198,7 +211,8 @@
                   "type": "Tampering",
                   "status": "Open",
                   "severity": "High",
-                  "description": "•\tEncrypt messages\n•\tImplemented data hashing and signing\n•\tImplemented digital sigs\n•\tImplemented strong auth\n•\tImplemented tamper-resistant protocols across communication links. Secured communication links with protocols that provide message integrity"
+                  "description": "Tampering attacks occur when the attacker modifies data in transit.  An attacker that modified a TCP stream by predicting the sequence numbers would be tampering with that data flows.",
+                  "mitigation": "•\tEncrypt messages\n•\tImplemented data hashing and signing\n•\tImplemented digital sigs\n•\tImplemented strong auth\n•\tImplemented tamper-resistant protocols across communication links. Secured communication links with protocols that provide message integrity"
                 },
                 {
                   "ruleId": "13000296-b17d-4b72-9cc4-f5cc33f80e4c",
@@ -206,7 +220,8 @@
                   "type": "Information disclosure",
                   "status": "Open",
                   "severity": "High",
-                  "description": "•\tImplement role-based security model\n•\tApply latest service packs after validation\n•\tHardened the TCP/IP stack by applying the appropriate registry settings to increase the size of the TCP connection queue, decrease the connection establishment period, and employed dynamic backlog mechanisms to ensure that the connection queue is never exhausted\n•\tImplemented IDS (Intrusion Detection System) to detect and respond to SYN attacks"
+                  "description": "Information Disclosure threats are usually quite straightforward - can the attacker view data that they're not supposed to view?  So if you're transferring data from one computer to another, if the attacker can sniff the data on the wire, then your component is subject to an information disclosure threat.",
+                  "mitigation": "•\tImplement role-based security model\n•\tApply latest service packs after validation\n•\tHardened the TCP/IP stack by applying the appropriate registry settings to increase the size of the TCP connection queue, decrease the connection establishment period, and employed dynamic backlog mechanisms to ensure that the connection queue is never exhausted\n•\tImplemented IDS (Intrusion Detection System) to detect and respond to SYN attacks"
                 },
                 {
                   "ruleId": "edb05d76-a695-455f-947b-7d67b78bc31d",
@@ -214,7 +229,8 @@
                   "type": "Denial of service",
                   "status": "Open",
                   "severity": "Medium",
-                  "description": "Resource and bandwidth throttling technique implemented - we will develop a custom listener that monitors messaging from IPs. When it exceeds certain thresholds, we terminate connections from the IP. This includes validation and input filtering."
+                  "description": "Denial of service threats occur when an attacker can degrade or deny service to users.  So if an attacker can crash your component or redirect packets into a black hole, or consume all the CPU on the box, you have a Denial of service situation.",
+                  "mitigation": "Resource and bandwidth throttling technique implemented - we will develop a custom listener that monitors messaging from IPs. When it exceeds certain thresholds, we terminate connections from the IP. This includes validation and input filtering."
                 }
               ],
               "attrs": {
